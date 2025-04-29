@@ -1,19 +1,21 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       animation: {
-        'pulse-slow': 'pulseSlow 10s ease-in-out infinite',
+        'pulse-slow': 'pulse-slow 10s ease-in-out infinite',
       },
       keyframes: {
-        pulseSlow: {
+        'pulse-slow': {
           '0%': { opacity: '1', transform: 'scale(1)' },
-          '50%': { opacity: '0.95', transform: 'scale(1.02)' },
+          '50%': { opacity: '0.95', transform: 'scale(1.01)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
+      },
+      transitionDelay: {
+    	'2000': '2000ms',
       },
     },
   },
   plugins: [],
-}
+};
