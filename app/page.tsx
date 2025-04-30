@@ -1,65 +1,129 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f0f0f] via-[#121212] to-[#1a1a1a] text-white px-6 sm:px-20 py-16 flex flex-col items-center gap-16">
-      
-      {/* Animated Background Blur */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute w-[600px] h-[600px] bg-[#00ffe1]/10 blur-[150px] rounded-full top-[-200px] left-[-200px] animate-pulse-slow"></div>
-        <div className="absolute w-[500px] h-[500px] bg-[#5abaff]/10 blur-[120px] rounded-full bottom-[-150px] right-[-150px] animate-pulse-slow delay-2000"></div>
-      </div>
-
+    <main className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-20 gap-12 text-center">
       {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center"
-      >
+      <section id="hero">
         <h1 className="text-4xl sm:text-6xl font-bold">NovaBots</h1>
-        <p className="mt-4 text-lg sm:text-xl text-gray-300 max-w-xl">
+        <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-xl">
           Automatizăm web-ul pentru tine – bots, AI, scraping, tot ce vrei. Rapid și eficient.
         </p>
         <a
           href="#contact"
-          className="mt-6 inline-block px-6 py-3 bg-white text-black rounded-full hover:bg-gray-300 transition duration-300"
+          className="mt-6 inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800"
         >
           Contactează-ne
         </a>
-      </motion.section>
+      </section>
 
       {/* About Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="max-w-2xl text-left text-gray-300"
-      >
+      <section id="about" className="max-w-2xl text-center">
         <h2 className="text-2xl font-semibold mb-2">Despre NovaBots</h2>
-        <p>
-          Suntem o echipă de pasionați de automatizare și inteligență artificială.
-          Construim soluții personalizate pentru clienți care vor să economisească timp și resurse.
+        <p className="text-gray-700">
+          Suntem o echipă pasionată de automatizare și inteligență artificială. 
+          Construim soluții personalizate pentru clienți care doresc să economisească timp și resurse prin tehnologii de ultimă generație. 
+          Misiunea noastră este să transformăm procesele repetitive în automatizări eficiente care cresc productivitatea și reduc erorile.
         </p>
-      </motion.section>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="w-full text-center">
+        <h2 className="text-2xl font-semibold mb-6">Serviciile Noastre</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-semibold mb-2">Automatizare Web</h3>
+            <p className="text-gray-600">
+              Automatizăm procesele web pentru a economisi timp și a reduce riscurile umane, creând soluții scalabile și eficiente.
+            </p>
+          </div>
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-semibold mb-2">Roboți AI</h3>
+            <p className="text-gray-600">
+              Dezvoltăm roboți inteligenți care pot lua decizii autonome pe baza datelor, aducând eficiență și viteză proceselor tale.
+            </p>
+          </div>
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-semibold mb-2">Web Scraping</h3>
+            <p className="text-gray-600">
+              Extragem date utile de pe web pentru a-ți furniza informații valoroase pentru deciziile de business sau cercetare.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Projects Section */}
+<section id="projects" className="w-full text-center mt-12">
+  <h2 className="text-2xl font-semibold mb-6">Proiecte Relevante</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-lg font-semibold mb-2">Bot Automatizare Comenzi</h3>
+      <p className="text-gray-600">
+        Am dezvoltat un bot care automatizează plasarea comenzilor într-un sistem B2B, economisind zilnic peste 3 ore de muncă repetitivă.
+      </p>
+    </div>
+    <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-lg font-semibold mb-2">Scraper Prețuri Produse</h3>
+      <p className="text-gray-600">
+        Am construit un sistem care extrage zilnic prețuri din peste 50 de magazine online pentru comparație și analiză de piață.
+      </p>
+    </div>
+    <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-lg font-semibold mb-2">Roboți AI pentru TWS</h3>
+      <p className="text-gray-600">
+        Roboți care interacționează autonom cu platforme de trading pentru a executa strategii pe baza unor semnale definite.
+      </p>
+    </div>
+    <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-lg font-semibold mb-2">Roboți pentru interactiune pe retelele de socializare</h3>
+      <p className="text-gray-600">
+        Roboți care interacționează autonom cu platforme de social media pentru a economisi timp in campaniile de marketing.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
-      <motion.section
-        id="contact"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
-        <h2 className="text-xl font-semibold">Hai să vorbim!</h2>
-        <p className="text-gray-400">
-          Trimite-ne un email la <a className="underline" href="mailto:contact@novabots.com">contact@novabots.com</a>
-        </p>
-      </motion.section>
+<section id="contact" className="w-full max-w-2xl mx-auto mt-12">
+  <h2 className="text-2xl font-semibold mb-6 text-center">Contact</h2>
+  <form className="space-y-4">
+    <div>
+      <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nume</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+      />
     </div>
+    <div>
+      <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="message" className="block text-sm font-medium text-gray-700">Mesaj</label>
+      <textarea
+        id="message"
+        name="message"
+        rows={4}
+        required
+        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+      />
+    </div>
+    <button
+      type="submit"
+      className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+    >
+      Trimite
+    </button>
+  </form>
+</section>
+    </main>
   );
 }

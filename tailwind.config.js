@@ -1,21 +1,22 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
-      animation: {
-        'pulse-slow': 'pulse-slow 10s ease-in-out infinite',
+      colors: {
+        // Adăugăm culori personalizate fără a elimina pe cele default
+        primary: '#0f172a', // albastru închis
+        secondary: '#1e293b', // gri-albastru închis
+        accent: '#38bdf8', // albastru deschis (sky-400)
       },
-      keyframes: {
-        'pulse-slow': {
-          '0%': { opacity: '1', transform: 'scale(1)' },
-          '50%': { opacity: '0.95', transform: 'scale(1.01)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
-        },
-      },
-      transitionDelay: {
-    	'2000': '2000ms',
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
     },
   },
   plugins: [],
-};
+}
